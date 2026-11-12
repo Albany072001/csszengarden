@@ -118,6 +118,7 @@ abbr[title] {
   align-items: start;
 }
 
+/* ============ Chapters 2 and 3 — shared grid ============ */
 
 .intro {
   grid-template-areas:
@@ -218,5 +219,69 @@ abbr[title] {
   grid-area: requirements; 
 }
 
+/* Each chapter's background colour, full width */
 
+.explanation,
+.participation,
+.benefits,
+.requirements {
+  padding-block: 1rem;
+  background: var(--band);
+  box-shadow: 0 0 0 100vmax var(--band);
+  clip-path: inset(0 -100vmax);
+}
+
+.explanation,
+.participation { 
+  --band: var(--scene-two); 
+}
+
+.benefits,
+.requirements { 
+  --band: var(--scene-three); 
+}
+
+/* Space at the top and bottom of each chapter */
+
+.explanation,
+.benefits { 
+  padding-top: 5rem; 
+}
+
+.participation,
+.requirements { 
+  padding-bottom: 5rem; 
+}
+
+/* Illustration boxes */
+
+.main.supporting::before,
+.main.supporting::after {
+  content: "";
+  display: block;
+  z-index: 1;
+  width: 100%;
+  aspect-ratio: 534 / 400;
+  align-self: center;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+/* Chapter 2 illustration */
+
+.main.supporting::before {
+  grid-area: scene-two;
+  background-image: url("assets/scene-2-character.svg"), url("assets/scene-2-house.svg"), url("assets/scene-2-landscape.svg");
+  background-size:     15.2% 33.5%, 40.3% 50.5%, 100% 31%;
+  background-position: 26.3% 65.8%, 83% 44.4%,   center bottom;
+}
+
+/* Chapter 3 illustration */
+
+.main.supporting::after {
+  grid-area: scene-three;
+  background-image: url("assets/scene-3-character.svg"), url("assets/scene-3-house.svg"), url("assets/scene-3-landscape.svg");
+  background-size:     15.2% 33.5%, 40.3% 50.5%, 100% 31%;
+  background-position: 26.3% 65.8%, 83% 44.4%,   center bottom;
+}
 
