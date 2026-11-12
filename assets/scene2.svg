@@ -1,26 +1,37 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 551 410" width="551" height="410" role="img" aria-labelledby="title desc">
-<title id="title">Zen Garden — Chapter 2</title><desc id="desc">A child waving in a green field beside a yellow house with a terracotta roof.</desc>
-<g id="background"><rect width="551" height="410" fill="#eaf2e9"/><path d="M551 109C495 142 475 196 479 275" fill="none" stroke="#dce9dd" stroke-width="1.2" opacity=".55"/></g><g id="house" stroke-linejoin="round" stroke-linecap="round">
-  <g id="chimney"><path d="M420.7 157V122.2H444.2V164" fill="#9a6d59" stroke="#49363f" stroke-width="3.5"/></g>
-  <g id="house-walls"><path d="M295.5 184.5L293 296.8Q370 307 452.6 298.1L453.5 181.6Q375 174 295.5 184.5Z" fill="#f0d393" stroke="#4d3b43" stroke-width="3.3"/><path d="M293 295.7C319 288 336 291 356 290L453 296.6" fill="none" stroke="#dcbd7d" stroke-width="2" opacity=".45"/></g>
-  <g id="house-door"><path d="M357.9 292.2V251.5C357.9 238.9 365.8 228.7 377.6 228.7S399.2 238.8 399.2 251.5V294.2Z" fill="#6c9b76" stroke="#49373f" stroke-width="3.6"/><circle cx="389.7" cy="262" r="3" fill="#51383d"/></g>
-  <g id="house-windows" fill="#fff9e8" stroke="#4c3941" stroke-width="3.4">
-    <g id="window-left"><rect x="308.2" y="210.4" width="32" height="37.8" rx="7.2"/><path d="M324.2 210.8V248M309 229H339" fill="none"/></g>
-    <g id="window-right"><rect x="411" y="210.3" width="32.8" height="38.2" rx="7.2"/><path d="M427.4 210.8V248M411.5 229.3H443" fill="none"/></g>
-  </g>
-  <g id="house-roof"><path d="M270.8 194.1L373.8 102.9L477.7 193.8Q374 172.4 270.8 194.1Z" fill="#c66140" stroke="#4c3941" stroke-width="3.4"/></g>
-</g><g id="landscape" stroke-linecap="round" stroke-linejoin="round">
- <g id="hills"><path d="M2 314C78 294 141 305 199 303C244 299 270 311 308 301C376 286 435 297 499 302L543 311V410H1Z" fill="#a4cd86"/><path d="M2 329C94 317 170 320 242 323C342 309 447 318 544 334L551 410H0Z" fill="#91bd79"/><path d="M0 354C82 322 178 328 239 330C324 322 395 324 453 329V410H0Z" fill="#7eaf69"/><path d="M1 396C109 379 204 386 267 392C368 383 450 401 545 387L551 410H0Z" fill="#6f9f59"/></g>
- <g id="grass-highlights" fill="none" stroke="#acd18f" stroke-width="7"><path d="M12 320Q41 314 75 315"/><path d="M47 353Q80 340 109 351"/><path d="M144 373Q177 360 217 371"/><path d="M269 346Q297 336 325 346"/><path d="M362 377Q393 365 429 375"/><path d="M467 339Q487 333 513 341"/><path d="M520 308L545 318"/></g>
-</g><g id="character" stroke-linecap="round" stroke-linejoin="round">
- <g id="character-legs" fill="#242421" stroke="#242421" stroke-width="2"><path d="M139.3 291.9L139 307.4"/><path d="M163 292L162 307.5"/><ellipse cx="143" cy="309.7" rx="9.6" ry="4.6" transform="rotate(-9 143 309.7)"/><ellipse cx="164" cy="309.6" rx="9.8" ry="4.6" transform="rotate(-7 164 309.6)"/></g>
- <g id="character-left-arm"><path d="M133.5 248.3C128 251 126.3 262 124.8 275.7C122.9 288 127.6 293.5 139.8 293L142 282.6L133.2 281L135.1 251" fill="#efb78f" stroke="#292724" stroke-width="2.8"/></g>
- <g id="character-right-arm"><path d="M171.8 251.1C180 245 183.5 241 187.8 235.8L194.6 227.7C197.7 224 199.2 227 197.2 230L189.8 239.5C193 236 193.8 229.8 192.6 226.4C191.5 221.8 188.8 221 187.2 225L184.8 232.9L185.3 224.7C185.4 220 182.3 220.2 181.5 223.5L180.4 233.1L178.9 228.1C177.8 225.5 175.7 226.7 176.3 230.8L178.4 240.6L169 245.5" fill="#efb78f" stroke="#292724" stroke-width="2.6"/></g>
- <g id="character-hair-back"><path d="M128.9 220.2C123 199.7 137.5 192 147.2 186.8L155 188.8L153 195C167 195 180 210.5 176.3 228.6Z" fill="#c85b2f" stroke="#272623" stroke-width="2.9"/></g>
- <g id="character-face"><path d="M129.5 216.2C132.9 207.3 141 203.9 151.7 204C164.8 203.7 175 214.9 175.5 229.2C175.9 244.2 165.9 254.8 151.1 255.6C136.2 256.3 127 245.8 127.2 231.8Z" fill="#f4c19c" stroke="#262522" stroke-width="2.8"/><ellipse cx="128.4" cy="229" rx="3.4" ry="7.1" fill="#f4c19c" stroke="#262522" stroke-width="2.3"/><ellipse cx="176" cy="230.7" rx="3.2" ry="6.1" fill="#f4c19c" stroke="#262522" stroke-width="2.3"/>
- <ellipse cx="140.9" cy="236.3" rx="5.2" ry="4" fill="#ed8e82" opacity=".85"/><ellipse cx="167.3" cy="237.9" rx="5.3" ry="4.3" fill="#ed8e82" opacity=".85"/>
- <ellipse cx="141.1" cy="226.1" rx="3.5" ry="5" fill="#232525"/><ellipse cx="165" cy="226.4" rx="3.5" ry="5" fill="#232525"/><circle cx="142" cy="224.1" r="1.1" fill="#fff"/><circle cx="165.8" cy="224.3" r="1.1" fill="#fff"/><path d="M147.8 240.1Q153 245.7 158.7 239.8" fill="none" stroke="#252522" stroke-width="2.3"/>
- </g>
- <g id="character-hair-front"><path d="M127.8 219.6C128.1 207.5 130.8 198.6 142.4 193.4L150.2 186.8L156.7 188.2L154.6 195.8C165.8 195.8 175.8 207 175.9 218.2L169.6 223.5C165.3 216.6 160.1 215.4 154.7 215.4H140.2C134 215.4 131 217.1 128.8 225Z" fill="#c85b2f" stroke="#252522" stroke-width="2.8"/></g>
- <g id="character-shirt"><path d="M134.6 249.4C140.6 255.5 161.1 257.4 169.8 249.1C173.9 261.8 174.2 279.2 174.7 291.9C164.4 299.1 143 300.8 132.4 294.5C130.8 280.6 130.4 263 134.6 249.4Z" fill="#438fca" stroke="#252522" stroke-width="2.8"/><path d="M135.9 254.4Q134 274 135.1 293" stroke="#72b9ea" stroke-width="2" fill="none" opacity=".8"/></g>
-</g></svg>
+<?xml version='1.0' encoding='UTF-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 551 410" width="551" height="410" role="img"><title>Zen Garden Chapter 2 scene</title><desc>Individually editable vector groups. Character geometry reused unchanged from Chapter 1.</desc><g id="background"><rect width="551" height="410" fill="#EAF2E8"/><path d="M563 115 C464 173 458 289 561 365" fill="none" stroke="#BEB7A9" stroke-width="1" opacity=".24"/></g><g id="house" stroke-linecap="round" stroke-linejoin="round">
+   <g id="house-chimney"><path d="M420 158 V122 H444 V180" fill="#9D705E" stroke="#49383F" stroke-width="3.3"/></g>
+   <g id="house-walls"><path d="M295 188 Q373 178 456 188 L453 297 Q379 290 292 299Z" fill="#F2D495" stroke="#514048" stroke-width="3"/></g>
+   <g id="house-roof"><path d="M270 194 L374 103 L478 194 Q374 171 270 194Z" fill="#C75C3C" stroke="#4C3B43" stroke-width="3.6"/></g>
+   <g id="house-windows" fill="#FFF8DF" stroke="#503D47" stroke-width="3.4">
+    <g id="house-window-left"><rect x="308" y="210" width="33" height="39" rx="9"/><path d="M324.5 211 V248 M309 229 H340" fill="none"/></g>
+    <g id="house-window-right"><rect x="411" y="210" width="33" height="39" rx="9"/><path d="M427.5 211 V248 M412 229 H443" fill="none"/></g>
+   </g>
+   <g id="house-door"><path d="M358 293 V257 Q358 229 379 229 Q400 229 400 257 V294Z" fill="#659678" stroke="#503F49" stroke-width="3.5"/><circle cx="390" cy="263" r="3" fill="#4E3F46"/></g>
+  </g><g id="landscape">
+   <g id="hill-back"><path d="M0 313 C58 298 105 298 158 299 C214 300 239 308 281 299 C329 289 379 294 441 296 C487 300 522 305 551 315 L551 410 H0Z" fill="#8FBE75"/></g>
+   <g id="hill-middle"><path d="M2 327 C69 311 112 318 167 315 C229 317 260 322 303 311 C366 302 414 311 456 312 C495 313 529 322 549 327 L549 410 H2Z" fill="#AED58B"/></g>
+   <g id="hill-front"><path d="M0 343 C65 329 111 327 172 327 C235 331 264 331 316 321 C371 317 414 331 455 332 L455 410 H0Z" fill="#80AD66"/><path d="M454 333 Q505 333 549 339 L549 410 H454Z" fill="#92BD79"/></g>
+   <g id="hill-bottom"><path d="M15 394 C96 382 162 395 223 385 C307 379 396 393 454 388 C492 387 524 392 548 389 V410 H12Z" fill="#6F9E55"/></g>
+   <g id="grass-details" fill="none" stroke="#AFD28B" stroke-width="8" stroke-linecap="round">
+    <path d="M9 319 Q73 302 127 309"/><path d="M47 355 Q76 343 108 353"/><path d="M144 374 Q177 358 213 371"/><path d="M267 348 Q296 334 323 346"/><path d="M363 379 Q397 366 430 378"/><path d="M467 341 Q490 330 513 340"/>
+   </g></g><g id="character" stroke-linecap="round" stroke-linejoin="round" transform="translate(-4 74)">
+  <!-- Arms are independently addressable for animation. -->
+  <g id="character-left-arm"><path d="M131 235 Q126 246 123 264 Q121 277 125 283 Q130 287 135 281 L139 250" fill="#E2A16F" stroke="#262323" stroke-width="2.8"/></g>
+  <g id="character-right-arm"><path d="M168 247 Q175 238 180 228 Q183 216 181 213 Q178 210 176 216 L174 225 Q177 214 181 211 Q186 210 186 216 L182 226 Q189 214 193 215 Q198 218 193 222 L182 234 L171 246Z" fill="#E6AB7E" stroke="#272424" stroke-width="2.6"/></g>
+  <path d="M139 280 L139 294 M162 280 L162 294" stroke="#272525" stroke-width="4"/>
+  <path d="M131 298 Q137 292 144 294 Q152 295 149 300 Q146 304 135 303 Q130 302 131 298Z" fill="#222322"/>
+  <path d="M153 298 Q159 292 167 294 Q174 296 170 301 Q167 304 157 304 Q151 302 153 298Z" fill="#222322"/>
+  <g id="character-head"><path d="M138 239 Q127 255 129 282 Q149 291 173 282 L171 252 Q169 241 163 237" fill="#388BCA" stroke="#2A2929" stroke-width="2.8"/>
+  <path d="M137 246 Q133 266 133 279" fill="none" stroke="#62A6D3" stroke-width="2" opacity=".9"/>
+  <ellipse cx="151" cy="214" rx="25" ry="32" fill="#F4B788" stroke="#282625" stroke-width="3"/>
+  <path d="M128 209 Q125 202 129 193 Q135 183 144 182 L149 176 L155 177 L152 183 Q171 185 175 200 Q178 208 175 216 Q171 207 164 206 Q150 202 137 206 Q131 209 128 215Z" fill="#C85F2D" stroke="#282626" stroke-width="3"/>
+  <path d="M147 184 Q153 179 155 177" fill="none" stroke="#282626" stroke-width="2.4"/>
+  <path d="M127 210 Q123 209 124 218 Q125 227 132 228" fill="#F2AE83" stroke="#282626" stroke-width="2.6"/>
+  <path d="M176 210 Q181 208 180 218 Q178 225 174 227" fill="#F2AE83" stroke="#282626" stroke-width="2.6"/>
+  <ellipse cx="141" cy="216" rx="4.4" ry="6" fill="#FAF8F1"/><ellipse cx="161" cy="216" rx="4.4" ry="6" fill="#FAF8F1"/>
+  <ellipse cx="141" cy="217" rx="2.4" ry="4.1" fill="#262525"/><ellipse cx="161" cy="217" rx="2.4" ry="4.1" fill="#262525"/>
+  <ellipse cx="134" cy="227" rx="6" ry="4.5" fill="#E79487" opacity=".75"/><ellipse cx="168" cy="227" rx="6" ry="4.5" fill="#E79487" opacity=".75"/>
+  <path d="M146 230 Q152 237 159 230" fill="none" stroke="#282625" stroke-width="2.6"/>
+</g></g>
+</svg>
