@@ -101,3 +101,77 @@ abbr[title] {
   text-decoration: underline dotted; 
   text-underline-offset: .13em; 
 }
+
+/* Page Layout */
+
+.page-wrapper { 
+  width: 100%; 
+  overflow: clip; 
+}
+
+.intro, 
+.main.supporting {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  column-gap: var(--columns-gap);
+  padding-inline: var(--gutter);
+  align-items: start;
+}
+
+/* Chapter 1 layout */
+.intro {
+  grid-template-areas:
+  "header illustration"
+  "summary illustration"
+  "preamble illustration";
+
+  row-gap: 2rem;
+  padding-block: 5rem;
+  background-color: var(--scene-one);
+}
+
+.intro > header {
+  grid-area: header;
+}
+
+.intro > .summary {
+  grid-area: summary;
+}
+
+.intro > .preamble {
+  grid-area: preamble;
+}
+
+/* Chp 1 - Shared illustration canvas */
+
+.intro::before,
+.intro::after {
+  content: "";
+  display: block;
+  grid-area: illustration;
+  width: 100%;
+  aspect-ratio: 534 / 400;
+  align-self: center;
+  justify-self: stretch;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+/* Bottom layers: house and landscape */
+
+.intro::after {
+  z-index: 1;
+  background-image: url("assets/scene-1-house.svg"), url("assets/scene-1-landscape.svg");
+  background-size:40.3% 50.5%, 100% 31%;
+  background-position: 83% 44.4%, center bottom;
+}
+
+/* Top layer: character */
+
+.intro::before {
+  z-index: 2;
+  background-image:
+  url("assets/scene-1-character.svg");
+  background-size: 15.2% 33.5%;
+  background-position: 26.3% 65.8%;
+}
