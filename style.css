@@ -35,3 +35,69 @@
   --columns-gap: clamp(1.75rem, 4.5vw, 4rem);
   --text-width: 68ch;
 }
+
+/* Base/reset — no IDs and no HTML edits. */
+
+*, *::before, *::after { 
+  box-sizing: border-box; 
+}
+
+html { 
+  scroll-behavior: smooth; 
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 400 1.1875rem/1.62 'Source Sans 3', Arial, sans-serif;
+}
+
+/* Anchor styling */
+
+a { 
+  color: var(--link); 
+  text-underline-offset: .16em; 
+  text-decoration-thickness: .075em; 
+}
+
+a:hover { 
+  color: var(--rust); 
+}
+
+a:focus-visible { 
+  outline: 3px solid currentColor; 
+  outline-offset: 4px; 
+}
+
+/* p tag styling */
+
+p { 
+  margin: 0 0 1.1em; 
+  overflow-wrap: break-word; 
+}
+
+p:last-child { 
+  margin-bottom: 0; 
+}
+
+/*Headings styling*/
+
+h1, h2, h3 {
+  margin: 0 0 .72em;
+  font-family: Lora, Georgia, serif;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -.025em;
+  overflow-wrap: break-word;
+}
+
+h3 { 
+  font-size: clamp(1.55rem, 2.25vw, 2.125rem); 
+}
+
+abbr[title] { 
+  text-decoration: underline dotted; 
+  text-underline-offset: .13em; 
+}
