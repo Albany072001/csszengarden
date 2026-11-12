@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="265 88 215 202" role="img">
+<g id="house" stroke-linejoin="round" stroke-linecap="round">
+  <path d="M419 142 L419 111 L441 111 L441 160" fill="#C6BFAD" stroke="#4B3B43" stroke-width="3.3"/>
+  <path d="M294 170 L452 170 L451 286 Q372 280 291 286 Z" fill="#E9E5D5" stroke="#58464F" stroke-width="2.6"/>
+  <path d="M269 183 L372 92 L476 183 Q371 162 269 183Z" fill="#99959D" stroke="#4C3B44" stroke-width="3.5"/>
+  <path d="M306 209 Q306 198 317 198 L327 198 Q339 198 339 210 L339 229 Q339 238 329 238 L316 238 Q306 238 306 228 Z" fill="#FAF8EE" stroke="#4E3D47" stroke-width="3.5"/>
+  <path d="M322 199 L322 237 M307 218 L338 218" stroke="#4E3D47" stroke-width="3.3" fill="none"/>
+  <path d="M409 210 Q409 199 420 199 L431 199 Q441 199 441 211 L441 227 Q441 238 431 238 L419 238 Q409 238 409 228Z" fill="#FAF8EE" stroke="#4E3D47" stroke-width="3.4"/>
+  <path d="M425 200 L425 237 M410 218 L440 218" stroke="#4E3D47" stroke-width="3.2" fill="none"/>
+  <path d="M356 279 L356 244 Q355 217 376 217 Q398 216 398 244 L398 281Z" fill="#91857F" stroke="#55434D" stroke-width="3.3"/>
+  <circle cx="388" cy="251" r="2.5" fill="#54434A"/>
+</g>
+</svg>
