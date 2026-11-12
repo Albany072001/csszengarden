@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 539 474" width="539" height="474"><g id="character" stroke-linecap="round" stroke-linejoin="round" transform="translate(-5 76)">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="114 249 81 134" width="81" height="134" preserveAspectRatio="xMidYMid meet"><g id="character" stroke-linecap="round" stroke-linejoin="round" transform="translate(-5 76)">
   <!-- Arms are independently addressable for animation. -->
   <g id="character-left-arm"><path d="M131 235 Q126 246 123 264 Q121 277 125 283 Q130 287 135 281 L139 250" fill="#E2A16F" stroke="#262323" stroke-width="2.8"/></g>
   <g id="character-right-arm"><path d="M168 247 Q175 238 180 228 Q183 216 181 213 Q178 210 176 216 L174 225 Q177 214 181 211 Q186 210 186 216 L182 226 Q189 214 193 215 Q198 218 193 222 L182 234 L171 246Z" fill="#E6AB7E" stroke="#272424" stroke-width="2.6"/></g>

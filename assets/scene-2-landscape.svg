@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 283 551 127" role="img" aria-label="Zen Garden Chapter 2 landscape"><g id="landscape" stroke-linecap="round" stroke-linejoin="round">
+<?xml version='1.0' encoding='UTF-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 283 551 127" role="img" aria-label="Zen Garden Chapter 2 landscape" width="551" height="127" preserveAspectRatio="xMidYMid meet">
+  <g id="landscape" stroke-linecap="round" stroke-linejoin="round">
  <g id="hills"><path d="M2 314C78 294 141 305 199 303C244 299 270 311 308 301C376 286 435 297 499 302L543 311V410H1Z" fill="#a4cd86"/><path d="M2 329C94 317 170 320 242 323C342 309 447 318 544 334L551 410H0Z" fill="#91bd79"/><path d="M0 354C82 322 178 328 239 330C324 322 395 324 453 329V410H0Z" fill="#7eaf69"/><path d="M1 396C109 379 204 386 267 392C368 383 450 401 545 387L551 410H0Z" fill="#6f9f59"/></g>
  <g id="grass-highlights" fill="none" stroke="#acd18f" stroke-width="7"><path d="M12 320Q41 314 75 315"/><path d="M47 353Q80 340 109 351"/><path d="M144 373Q177 360 217 371"/><path d="M269 346Q297 336 325 346"/><path d="M362 377Q393 365 429 375"/><path d="M467 339Q487 333 513 341"/><path d="M520 308L545 318"/></g>
-</g></svg>
+</g>
+</svg>

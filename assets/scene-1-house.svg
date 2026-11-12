@@ -1,4 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="265 88 215 202" role="img">
+<?xml version='1.0' encoding='UTF-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="265 88 215 202" role="img" width="215" height="202" preserveAspectRatio="xMidYMid meet">
 <g id="house" stroke-linejoin="round" stroke-linecap="round">
   <path d="M419 142 L419 111 L441 111 L441 160" fill="#C6BFAD" stroke="#4B3B43" stroke-width="3.3"/>
   <path d="M294 170 L452 170 L451 286 Q372 280 291 286 Z" fill="#E9E5D5" stroke="#58464F" stroke-width="2.6"/>
