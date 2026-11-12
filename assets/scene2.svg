@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 551 410" width="551" height="410" role="img" aria-labelledby="title desc">
+<title id="title">Zen Garden — Chapter 2</title><desc id="desc">A child waving in a green field beside a yellow house with a terracotta roof.</desc>
+<g id="background"><rect width="551" height="410" fill="#eaf2e9"/><path d="M551 109C495 142 475 196 479 275" fill="none" stroke="#dce9dd" stroke-width="1.2" opacity=".55"/></g><g id="house" stroke-linejoin="round" stroke-linecap="round">
+  <g id="chimney"><path d="M420.7 157V122.2H444.2V164" fill="#9a6d59" stroke="#49363f" stroke-width="3.5"/></g>
+  <g id="house-walls"><path d="M295.5 184.5L293 296.8Q370 307 452.6 298.1L453.5 181.6Q375 174 295.5 184.5Z" fill="#f0d393" stroke="#4d3b43" stroke-width="3.3"/><path d="M293 295.7C319 288 336 291 356 290L453 296.6" fill="none" stroke="#dcbd7d" stroke-width="2" opacity=".45"/></g>
+  <g id="house-door"><path d="M357.9 292.2V251.5C357.9 238.9 365.8 228.7 377.6 228.7S399.2 238.8 399.2 251.5V294.2Z" fill="#6c9b76" stroke="#49373f" stroke-width="3.6"/><circle cx="389.7" cy="262" r="3" fill="#51383d"/></g>
+  <g id="house-windows" fill="#fff9e8" stroke="#4c3941" stroke-width="3.4">
+    <g id="window-left"><rect x="308.2" y="210.4" width="32" height="37.8" rx="7.2"/><path d="M324.2 210.8V248M309 229H339" fill="none"/></g>
+    <g id="window-right"><rect x="411" y="210.3" width="32.8" height="38.2" rx="7.2"/><path d="M427.4 210.8V248M411.5 229.3H443" fill="none"/></g>
+  </g>
+  <g id="house-roof"><path d="M270.8 194.1L373.8 102.9L477.7 193.8Q374 172.4 270.8 194.1Z" fill="#c66140" stroke="#4c3941" stroke-width="3.4"/></g>
+</g><g id="landscape" stroke-linecap="round" stroke-linejoin="round">
+ <g id="hills"><path d="M2 314C78 294 141 305 199 303C244 299 270 311 308 301C376 286 435 297 499 302L543 311V410H1Z" fill="#a4cd86"/><path d="M2 329C94 317 170 320 242 323C342 309 447 318 544 334L551 410H0Z" fill="#91bd79"/><path d="M0 354C82 322 178 328 239 330C324 322 395 324 453 329V410H0Z" fill="#7eaf69"/><path d="M1 396C109 379 204 386 267 392C368 383 450 401 545 387L551 410H0Z" fill="#6f9f59"/></g>
+ <g id="grass-highlights" fill="none" stroke="#acd18f" stroke-width="7"><path d="M12 320Q41 314 75 315"/><path d="M47 353Q80 340 109 351"/><path d="M144 373Q177 360 217 371"/><path d="M269 346Q297 336 325 346"/><path d="M362 377Q393 365 429 375"/><path d="M467 339Q487 333 513 341"/><path d="M520 308L545 318"/></g>
+</g><g id="character" stroke-linecap="round" stroke-linejoin="round">
+ <g id="character-legs" fill="#242421" stroke="#242421" stroke-width="2"><path d="M139.3 291.9L139 307.4"/><path d="M163 292L162 307.5"/><ellipse cx="143" cy="309.7" rx="9.6" ry="4.6" transform="rotate(-9 143 309.7)"/><ellipse cx="164" cy="309.6" rx="9.8" ry="4.6" transform="rotate(-7 164 309.6)"/></g>
+ <g id="character-left-arm"><path d="M133.5 248.3C128 251 126.3 262 124.8 275.7C122.9 288 127.6 293.5 139.8 293L142 282.6L133.2 281L135.1 251" fill="#efb78f" stroke="#292724" stroke-width="2.8"/></g>
+ <g id="character-right-arm"><path d="M171.8 251.1C180 245 183.5 241 187.8 235.8L194.6 227.7C197.7 224 199.2 227 197.2 230L189.8 239.5C193 236 193.8 229.8 192.6 226.4C191.5 221.8 188.8 221 187.2 225L184.8 232.9L185.3 224.7C185.4 220 182.3 220.2 181.5 223.5L180.4 233.1L178.9 228.1C177.8 225.5 175.7 226.7 176.3 230.8L178.4 240.6L169 245.5" fill="#efb78f" stroke="#292724" stroke-width="2.6"/></g>
+ <g id="character-hair-back"><path d="M128.9 220.2C123 199.7 137.5 192 147.2 186.8L155 188.8L153 195C167 195 180 210.5 176.3 228.6Z" fill="#c85b2f" stroke="#272623" stroke-width="2.9"/></g>
+ <g id="character-face"><path d="M129.5 216.2C132.9 207.3 141 203.9 151.7 204C164.8 203.7 175 214.9 175.5 229.2C175.9 244.2 165.9 254.8 151.1 255.6C136.2 256.3 127 245.8 127.2 231.8Z" fill="#f4c19c" stroke="#262522" stroke-width="2.8"/><ellipse cx="128.4" cy="229" rx="3.4" ry="7.1" fill="#f4c19c" stroke="#262522" stroke-width="2.3"/><ellipse cx="176" cy="230.7" rx="3.2" ry="6.1" fill="#f4c19c" stroke="#262522" stroke-width="2.3"/>
+ <ellipse cx="140.9" cy="236.3" rx="5.2" ry="4" fill="#ed8e82" opacity=".85"/><ellipse cx="167.3" cy="237.9" rx="5.3" ry="4.3" fill="#ed8e82" opacity=".85"/>
+ <ellipse cx="141.1" cy="226.1" rx="3.5" ry="5" fill="#232525"/><ellipse cx="165" cy="226.4" rx="3.5" ry="5" fill="#232525"/><circle cx="142" cy="224.1" r="1.1" fill="#fff"/><circle cx="165.8" cy="224.3" r="1.1" fill="#fff"/><path d="M147.8 240.1Q153 245.7 158.7 239.8" fill="none" stroke="#252522" stroke-width="2.3"/>
+ </g>
+ <g id="character-hair-front"><path d="M127.8 219.6C128.1 207.5 130.8 198.6 142.4 193.4L150.2 186.8L156.7 188.2L154.6 195.8C165.8 195.8 175.8 207 175.9 218.2L169.6 223.5C165.3 216.6 160.1 215.4 154.7 215.4H140.2C134 215.4 131 217.1 128.8 225Z" fill="#c85b2f" stroke="#252522" stroke-width="2.8"/></g>
+ <g id="character-shirt"><path d="M134.6 249.4C140.6 255.5 161.1 257.4 169.8 249.1C173.9 261.8 174.2 279.2 174.7 291.9C164.4 299.1 143 300.8 132.4 294.5C130.8 280.6 130.4 263 134.6 249.4Z" fill="#438fca" stroke="#252522" stroke-width="2.8"/><path d="M135.9 254.4Q134 274 135.1 293" stroke="#72b9ea" stroke-width="2" fill="none" opacity=".8"/></g>
+</g></svg>

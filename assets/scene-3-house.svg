@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 539 474" width="539" height="474" role="img" aria-labelledby="title desc"><title id="title">Zen Garden — Chapter 3</title><desc id="desc">Hand-drawn boy waving in front of a warm-colored house on green hills under a pale peach sky.</desc><g id="house" stroke="#49383B" stroke-linecap="round" stroke-linejoin="round">
+<g id="house-chimney"><path d="M414 212 L414 187 L438 187 L438 232" fill="#A56E53" stroke-width="3.5"/></g>
+<g id="house-walls"><path d="M289 245 Q368 237 451 247 L449 362 Q369 370 287 362 Z" fill="#F3CF9D" stroke-width="3.5"/><path d="M373 249 L451 248 L449 362 L373 364Z" fill="#E9B783" opacity=".65" stroke="none"/></g>
+<g id="house-roof"><path d="M264 259 L368 168 L472 259 Q367 238 264 259Z" fill="#C45D40" stroke-width="3.5"/></g>
+<g id="house-left-window"><rect x="302" y="275" width="32" height="39" rx="8" fill="#FFF8E7" stroke-width="3.5"/><path d="M318 276V313 M304 294H333" fill="none" stroke-width="3"/></g>
+<g id="house-right-window"><rect x="405" y="275" width="32" height="39" rx="8" fill="#FFF8E7" stroke-width="3.5"/><path d="M421 276V313 M407 294H436" fill="none" stroke-width="3"/></g>
+<g id="house-door"><path d="M352 361 L352 313 C352 286 393 285 393 314 L393 362Z" fill="#937361" stroke-width="3.5"/><circle cx="384" cy="327" r="3" fill="#4A3839" stroke="none"/></g>
+</g></svg>
