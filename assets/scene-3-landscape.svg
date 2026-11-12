@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 350 539 124" width="539" height="124" role="img" aria-labelledby="title desc" preserveAspectRatio="xMidYMid meet">
+  <title id="title">Zen Garden — Chapter 3</title>
+  <desc id="desc">Hand-drawn boy waving in front of a warm-colored house on green hills under a pale peach sky.</desc>
+  <g id="landscape">
+<path d="M0 378 Q52 359 119 365 Q191 359 250 369 Q311 372 362 356 Q440 360 539 376 L539 474H0Z" fill="#99C47E"/>
+<path d="M0 384 Q65 370 137 374 Q195 368 263 378 Q335 367 392 373 Q477 369 539 385 L539 474H0Z" fill="#A5CC82"/>
+<path d="M0 397 Q116 375 230 394 Q344 377 454 389 Q505 390 539 396 V474H0Z" fill="#7FAE61"/>
+<path d="M0 458 Q87 446 174 458 Q266 460 335 452 Q426 464 539 454V474H0Z" fill="#6E9B53"/>
+<g id="grass-details" fill="none" stroke="#AAD083" stroke-width="8" stroke-linecap="round" opacity=".85"><path d="M5 383 Q32 374 61 378"/><path d="M41 420 Q70 404 105 416"/><path d="M138 439 Q174 423 211 437"/><path d="M262 410 Q289 399 319 410"/><path d="M355 443 Q387 428 421 441"/><path d="M462 408 Q484 399 507 406"/></g>
+</g>
+</svg>

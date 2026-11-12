@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 276 534 124" role="img" width="534" height="124" preserveAspectRatio="xMidYMid meet">
+<g id="landscape">
+  <path d="M0 302 C59 287 103 293 159 289 C205 287 235 294 265 289 C322 277 384 285 438 287 C475 291 506 294 534 299 L534 400 H0Z" fill="#B6C2A7"/>
+  <path d="M0 315 C65 298 116 307 166 301 C211 298 245 307 285 300 C348 286 409 298 463 298 C494 299 517 302 534 307 L534 400 H0Z" fill="#C8D0B5"/>
+  <path d="M0 329 C58 315 108 324 147 318 C211 315 250 321 298 312 C349 302 401 310 453 311 L453 400 H0Z" fill="#B5C2A6"/>
+  <path d="M0 384 C57 379 108 384 155 377 C227 371 285 382 347 375 C409 368 475 391 534 379 L534 400 H0Z" fill="#AAB99A"/>
+  <path d="M7 308 C53 295 98 296 123 298" fill="none" stroke="#D1D9BF" stroke-width="8" stroke-linecap="round" opacity=".65"/>
+  <path d="M45 343 Q78 331 107 340" fill="none" stroke="#CDD6BA" stroke-width="8" stroke-linecap="round"/>
+  <path d="M142 363 Q177 346 214 357" fill="none" stroke="#CDD6BA" stroke-width="8" stroke-linecap="round"/>
+  <path d="M267 335 Q294 324 323 335" fill="none" stroke="#CDD6BA" stroke-width="8" stroke-linecap="round"/>
+  <path d="M361 366 Q395 352 427 365" fill="none" stroke="#CDD6BA" stroke-width="8" stroke-linecap="round"/>
+  <path d="M465 330 Q493 320 518 328" fill="none" stroke="#CDD6BA" stroke-width="8" stroke-linecap="round"/>
+</g>
+</svg>

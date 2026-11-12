@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="265 98 219 205" role="img" aria-label="Zen Garden Chapter 2 house" width="219" height="205" preserveAspectRatio="xMidYMid meet">
+  <g id="house" stroke-linejoin="round" stroke-linecap="round">
+  <g id="chimney"><path d="M420.7 157V122.2H444.2V164" fill="#9a6d59" stroke="#49363f" stroke-width="3.5"/></g>
+  <g id="house-walls"><path d="M295.5 184.5L293 296.8Q370 307 452.6 298.1L453.5 181.6Q375 174 295.5 184.5Z" fill="#f0d393" stroke="#4d3b43" stroke-width="3.3"/><path d="M293 295.7C319 288 336 291 356 290L453 296.6" fill="none" stroke="#dcbd7d" stroke-width="2" opacity=".45"/></g>
+  <g id="house-door"><path d="M357.9 292.2V251.5C357.9 238.9 365.8 228.7 377.6 228.7S399.2 238.8 399.2 251.5V294.2Z" fill="#6c9b76" stroke="#49373f" stroke-width="3.6"/><circle cx="389.7" cy="262" r="3" fill="#51383d"/></g>
+  <g id="house-windows" fill="#fff9e8" stroke="#4c3941" stroke-width="3.4">
+    <g id="window-left"><rect x="308.2" y="210.4" width="32" height="37.8" rx="7.2"/><path d="M324.2 210.8V248M309 229H339" fill="none"/></g>
+    <g id="window-right"><rect x="411" y="210.3" width="32.8" height="38.2" rx="7.2"/><path d="M427.4 210.8V248M411.5 229.3H443" fill="none"/></g>
+  </g>
+  <g id="house-roof"><path d="M270.8 194.1L373.8 102.9L477.7 193.8Q374 172.4 270.8 194.1Z" fill="#c66140" stroke="#4c3941" stroke-width="3.4"/></g>
+</g>
+</svg>

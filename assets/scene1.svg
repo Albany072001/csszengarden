@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 534 400" width="534" height="400" role="img" aria-labelledby="scene-title scene-desc">
+<title id="scene-title">Child waving beside a house</title>
+<desc id="scene-desc">Hand-drawn illustration recreated as editable vector shapes, with separate character, house, and landscape layers.</desc>
+<g id="background"><rect width="534" height="400" fill="#F7F4EC"/></g><g id="house" stroke-linejoin="round" stroke-linecap="round">
+  <path d="M419 142 L419 111 L441 111 L441 160" fill="#C6BFAD" stroke="#4B3B43" stroke-width="3.3"/>
+  <path d="M294 170 L452 170 L451 286 Q372 280 291 286 Z" fill="#E9E5D5" stroke="#58464F" stroke-width="2.6"/>
+  <path d="M269 183 L372 92 L476 183 Q371 162 269 183Z" fill="#99959D" stroke="#4C3B44" stroke-width="3.5"/>
+  <path d="M306 209 Q306 198 317 198 L327 198 Q339 198 339 210 L339 229 Q339 238 329 238 L316 238 Q306 238 306 228 Z" fill="#FAF8EE" stroke="#4E3D47" stroke-width="3.5"/>
+  <path d="M322 199 L322 237 M307 218 L338 218" stroke="#4E3D47" stroke-width="3.3" fill="none"/>
+  <path d="M409 210 Q409 199 420 199 L431 199 Q441 199 441 211 L441 227 Q441 238 431 238 L419 238 Q409 238 409 228Z" fill="#FAF8EE" stroke="#4E3D47" stroke-width="3.4"/>
+  <path d="M425 200 L425 237 M410 218 L440 218" stroke="#4E3D47" stroke-width="3.2" fill="none"/>
+  <path d="M356 279 L356 244 Q355 217 376 217 Q398 216 398 244 L398 281Z" fill="#91857F" stroke="#55434D" stroke-width="3.3"/>
+  <circle cx="388" cy="251" r="2.5" fill="#54434A"/>
+</g><g id="landscape">
+  <path d="M0 302 C59 287 103 293 159 289 C205 287 235 294 265 289 C322 277 384 285 438 287 C475 291 506 294 534 299 L534 400 H0Z" fill="#B6C2A7"/>
+  <path d="M0 315 C65 298 116 307 166 301 C211 298 245 307 285 300 C348 286 409 298 463 298 C494 299 517 302 534 307 L534 400 H0Z" fill="#C8D0B5"/>
+  <path d="M0 329 C58 315 108 324 147 318 C211 315 250 321 298 312 C349 302 401 310 453 311 L453 400 H0Z" fill="#B5C2A6"/>
+  <path d="M0 384 C57 379 108 384 155 377 C227 371 285 382 347 375 C409 368 475 391 534 379 L534 400 H0Z" fill="#AAB99A"/>
+  <path d="M7 308 C53 295 98 296 123 298" fill="none" stroke="#D1D9BF" stroke-width="8" stroke-linecap="round" opacity=".65"/>
+  <path d="M45 343 Q78 331 107 340" fill="none" stroke="#CDD6BA" stroke-width="8" stroke-linecap="round"/>
+  <path d="M142 363 Q177 346 214 357" fill="none" stroke="#CDD6BA" stroke-width="8" stroke-linecap="round"/>
+  <path d="M267 335 Q294 324 323 335" fill="none" stroke="#CDD6BA" stroke-width="8" stroke-linecap="round"/>
+  <path d="M361 366 Q395 352 427 365" fill="none" stroke="#CDD6BA" stroke-width="8" stroke-linecap="round"/>
+  <path d="M465 330 Q493 320 518 328" fill="none" stroke="#CDD6BA" stroke-width="8" stroke-linecap="round"/>
+</g><g id="character" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Arms are independently addressable for animation. -->
+  <g id="character-left-arm"><path d="M131 235 Q126 246 123 264 Q121 277 125 283 Q130 287 135 281 L139 250" fill="#E2A16F" stroke="#262323" stroke-width="2.8"/></g>
+  <g id="character-right-arm"><path d="M168 247 Q175 238 180 228 Q183 216 181 213 Q178 210 176 216 L174 225 Q177 214 181 211 Q186 210 186 216 L182 226 Q189 214 193 215 Q198 218 193 222 L182 234 L171 246Z" fill="#E6AB7E" stroke="#272424" stroke-width="2.6"/></g>
+  <path d="M139 280 L139 294 M162 280 L162 294" stroke="#272525" stroke-width="4"/>
+  <path d="M131 298 Q137 292 144 294 Q152 295 149 300 Q146 304 135 303 Q130 302 131 298Z" fill="#222322"/>
+  <path d="M153 298 Q159 292 167 294 Q174 296 170 301 Q167 304 157 304 Q151 302 153 298Z" fill="#222322"/>
+  <path d="M138 239 Q127 255 129 282 Q149 291 173 282 L171 252 Q169 241 163 237" fill="#388BCA" stroke="#2A2929" stroke-width="2.8"/>
+  <path d="M137 246 Q133 266 133 279" fill="none" stroke="#62A6D3" stroke-width="2" opacity=".9"/>
+  <ellipse cx="151" cy="214" rx="25" ry="32" fill="#F4B788" stroke="#282625" stroke-width="3"/>
+  <path d="M128 209 Q125 202 129 193 Q135 183 144 182 L149 176 L155 177 L152 183 Q171 185 175 200 Q178 208 175 216 Q171 207 164 206 Q150 202 137 206 Q131 209 128 215Z" fill="#C85F2D" stroke="#282626" stroke-width="3"/>
+  <path d="M147 184 Q153 179 155 177" fill="none" stroke="#282626" stroke-width="2.4"/>
+  <path d="M127 210 Q123 209 124 218 Q125 227 132 228" fill="#F2AE83" stroke="#282626" stroke-width="2.6"/>
+  <path d="M176 210 Q181 208 180 218 Q178 225 174 227" fill="#F2AE83" stroke="#282626" stroke-width="2.6"/>
+  <ellipse cx="141" cy="216" rx="4.4" ry="6" fill="#FAF8F1"/><ellipse cx="161" cy="216" rx="4.4" ry="6" fill="#FAF8F1"/>
+  <ellipse cx="141" cy="217" rx="2.4" ry="4.1" fill="#262525"/><ellipse cx="161" cy="217" rx="2.4" ry="4.1" fill="#262525"/>
+  <ellipse cx="134" cy="227" rx="6" ry="4.5" fill="#E79487" opacity=".75"/><ellipse cx="168" cy="227" rx="6" ry="4.5" fill="#E79487" opacity=".75"/>
+  <path d="M146 230 Q152 237 159 230" fill="none" stroke="#282625" stroke-width="2.6"/>
+</g>
+</svg>
