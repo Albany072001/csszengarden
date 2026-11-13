@@ -250,7 +250,7 @@ abbr[title] {
 
 .participation,
 .requirements { 
-  padding-bottom: 5rem; 
+  padding-bottom: 0; 
 }
 
 /* Illustration boxes */
@@ -284,4 +284,36 @@ abbr[title] {
   background-size:     15.2% 33.5%, 40.3% 50.5%, 100% 31%;
   background-position: 26.3% 65.8%, 83% 44.4%,   center bottom;
 }
+
+/* Footer layout */
+
+.supporting > footer {
+  grid-area: footer;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 0;
+  padding: 48px 0 64px;
+  background-color: var(--scene-three);
+  box-shadow: 0 0 0 100vmax var(--scene-three);
+  clip-path: inset(0 -100vmax);
+  position: relative;
+}
+
+/* Divider after requirements */
+
+.supporting > footer::before {
+  content: "";
+  display: block;
+  flex: 0 0 calc((100% - var(--columns-gap)) / 2);
+  height: 1px;
+  background-color: var(--link);
+  margin-right: 50%;
+  margin-bottom: 24px;
+}
+
+
 
