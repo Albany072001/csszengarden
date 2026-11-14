@@ -1,6 +1,6 @@
 # An illustrated, scroll-driven interpretation of CSS Zen Garden
 
-## The Concept
+**The Concept**
 
 *The Same House, A New Look* tells a visual story across three chapters. The house and character remain familiar, but their surroundings, colors, and motion evolve as the visitor scrolls. This reflects the central idea behind **CSS Zen Garden**: the same HTML content can take on a different visual identity through CSS alone.
 
