@@ -13,8 +13,11 @@
  * Three-chapter, CSS-only storybook theme.
  * Fixed HTML contract: never edit the provided index.html.
  * Illustration paths are relative to this stylesheet.
- * Replace the three temporary images with original drawings for submission.
+ * Replace the three temporary images with digital hand-drawm SVG for submission.
  */
+
+ /* ============ Design Tokens ============ */
+
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:wght@400;600;700&display=swap');
 
 :root {
@@ -36,7 +39,9 @@
   --text-width: 68ch;
 }
 
-/* Base/reset — no IDs and no HTML edits. */
+/* ============ Reset, Typography, & Links ============ 
+  Base/reset — no IDs and no HTML edits.
+*/
 
 *, *::before, *::after { 
   box-sizing: border-box; 
@@ -102,7 +107,7 @@ abbr[title] {
   text-underline-offset: .13em; 
 }
 
-/* Page Layout */
+/* ============ Shared page layouts ============ */
 
 .page-wrapper { 
   width: 100%; 
@@ -118,7 +123,7 @@ abbr[title] {
   align-items: start;
 }
 
-/* ============ Chapters 2 and 3 — shared grid ============ */
+/* ============ Chapter 1: text (left) & layered images (rigth) ============ */
 
 .intro {
   grid-template-areas:
@@ -133,23 +138,49 @@ abbr[title] {
  
 .intro > header   { 
   grid-area: header; 
+  min-width: 0;
 }
 
 .intro > .summary {
   grid-area: summary; 
-}
-
-.intro > .preamble {
-  grid-area: preamble; 
-}
- 
-.intro > .summary {
+  min-width: 0;
   color: var(--muted);
   font-size: 1.0625rem;
 }
+
+.intro > .preamble {
+  grid-area: preamble;
+  min-width: 0; 
+}
  
-/* Chp 1 - Shared illustration canvas */
+/* Chapter 1 - Shared images canvas */
  
+.intro > header::before {
+  content: 'Chapter One -- The house stands against a simple, muted beige background';
+  display: block;
+  margin-bottom: 1.5rem;
+  color: var(--link);
+  font: 700 0.8125rem/1.4 'Source Sans 3', Arial, sans-serif;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.intro > header h1 {
+  color: var(--blue); 
+  font-size: clamp(3rem, 5.8vw, 5.5rem); 
+}
+
+.intro > header h2 {
+  color: var(--blue); 
+  font-size: clamp(1.25rem, 2.2vw, 1.875rem); 
+  font-style: italic; 
+}
+
+.intro .preamble h3 {
+  color: var(--blue); 
+}
+
+
 .intro::before,
 .intro::after {
   content: "";
@@ -192,72 +223,106 @@ abbr[title] {
     "benefits      scene-three"
     "requirements  scene-three"
     "footer        footer";
-
   row-gap: 0;     
   position: relative;
   isolation: isolate;
   background: var(--appendix);  
 }
 
-/* Chapter 2 - Text*/
-
-.explanation { 
-  grid-area: explanation; 
-}
-
-.participation { 
-  grid-area: participation; 
-}
-
-/* Chapter 3 - Text*/
-
-.benefits { 
-  grid-area: benefits;
-}
-
-.requirements {
-  grid-area: requirements; 
-}
-
-/* Each chapter's background colour, full width */
-
-.explanation,
-.participation,
-.benefits,
-.requirements {
+.main.supporting > .explanation,
+.main.supporting > .participation,
+.main.supporting > .benefits,
+.main.supporting > .requirements {
+  position: relative;
+  z-index: 0;
+  min-width: 0;
+  margin: 0;
   padding-block: 1rem;
-  background: var(--band);
-  box-shadow: 0 0 0 100vmax var(--band);
-  clip-path: inset(0 -100vmax);
 }
 
-.explanation,
-.participation { 
-  --band: var(--scene-two); 
-}
+/* Chapter 2: background color, font styling & full width */
 
-.benefits,
-.requirements { 
-  --band: var(--scene-three); 
-}
 
-/* Space at the top and bottom of each chapter */
-
-.explanation,
-.benefits { 
+.main.supporting > .explanation {
+  grid-area: explanation;
   padding-top: 5rem; 
 }
 
-.participation,
-.requirements { 
+.main.supporting > .participation {
+  grid-area: participation; 
   padding-bottom: 5rem; 
 }
 
-/* Illustration boxes */
+.main.supporting > .explanation::before {
+  content: 'Chapter Two -- he same house comes to life with vibrant colors and an animated background';
+  display: block;
+  margin-bottom: 2rem;
+  color: var(--link);
+  font: 700 0.8125rem/1.4 'Source Sans 3', Arial, sans-serif;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.main.supporting > .explanation::after,
+.main.supporting > .participation::after {
+  content: '';
+  position: absolute;
+  inset-block: 0;
+  left: calc(-1 * var(--gutter));
+  width: 100vw;
+  background: var(--scene-two);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.explanation h3, .participation h3 {
+  color: var(--olive); 
+}
+
+/* Chapter 3: background color, font styling & full width*/
+
+.main.supporting > .benefits {
+  grid-area: benefits; 
+  padding-top: 5rem; 
+}
+
+.main.supporting > .requirements {
+  grid-area: requirements;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.main.supporting > .benefits::before {
+  content: 'Chapter Three -- The same house, transformed by harmonious color patterns';
+  display: block;
+  margin-bottom: 2rem;
+  color: var(--rust);
+  font: 700 0.8125rem/1.4 'Source Sans 3', Arial, sans-serif;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.main.supporting > .requirements::after,
+.main.supporting > .benefits::after {
+  content: '';
+  position: absolute;
+  inset-block: 0;
+  left: calc(-1 * var(--gutter));
+  width: 100vw;
+  background: var(--scene-three);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.benefits h3, .requirements h3 {
+  color: var(--rust); 
+}
+
+/* SVG boxes */
 
 .main.supporting::before,
 .main.supporting::after {
-  content: "";
+  content: '';
   display: block;
   z-index: 1;
   width: 100%;
@@ -267,7 +332,7 @@ abbr[title] {
   pointer-events: none;
 }
 
-/* Chapter 2 illustration */
+/* Chapter 2 SVG */
 
 .main.supporting::before {
   grid-area: scene-two;
@@ -276,12 +341,111 @@ abbr[title] {
   background-position: 26.3% 65.8%, 83% 44.4%,   center bottom;
 }
 
-/* Chapter 3 illustration */
+/* Chapter 3 SVG */
 
 .main.supporting::after {
   grid-area: scene-three;
   background-image: url("assets/scene-3-character.svg"), url("assets/scene-3-house.svg"), url("assets/scene-3-landscape.svg");
   background-size:     15.2% 33.5%, 40.3% 50.5%, 100% 31%;
   background-position: 26.3% 65.8%, 83% 44.4%,   center bottom;
+}
+
+/* ============ Footer Layout ============*/
+
+.supporting > footer {
+  grid-area: footer;
+  min-width: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 0;
+  padding: 48px 0 64px;
+  background-color: var(--scene-three);
+  box-shadow: 0 0 0 100vmax var(--scene-three);
+  clip-path: inset(0 -100vmax);
+  position: relative;
+}
+
+/* Divider after requirements */
+
+.supporting > footer::before {
+  content: "";
+  display: block;
+  flex: 0 0 calc((100% - var(--columns-gap)) / 2);
+  height: 1px;
+  background-color: var(--link);
+  margin-right: 50%;
+  margin-bottom: 24px;
+}
+
+/* Website resources - now looks like a footer */ 
+
+.sidebar {
+  width: 100%;
+  padding: 64px var(--gutter) 96px;
+  background: var(--appendix);
+}
+
+.sidebar .wrapper {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 0.75fr) minmax(0, 1.1fr);
+  column-gap: clamp(2rem, 5vw, 5rem);
+  border-top: 1px solid var(--hairline);
+  padding-top: 32px;
+  width: 100%;
+  margin: 0;
+}
+
+.sidebar .wrapper > * {
+  min-width: 0; 
+}
+
+.sidebar h3 {
+  margin-bottom: 1.5rem; 
+}
+
+.sidebar ul {
+  list-style: none; 
+  margin: 0; 
+  padding: 0; 
+}
+
+.sidebar li {
+  margin-bottom: 1.25rem; 
+  line-height: 1.45; 
+}
+
+.sidebar .design-selection ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 32px;
+  row-gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar .design-selection li {
+  min-width: 0;
+  margin: 0;
+  line-height: 1.45;
+}
+
+.sidebar .design-selection .design-name {
+  display: block;
+  width: fit-content;
+  line-height: 1.4;
+  color: var(--link);
+  text-decoration: underline;
+  cursor: default;
+  
+}
+
+.sidebar .design-selection .designer-name {
+  line-height: 1.45;
+  text-decoration: none;
 }
 
