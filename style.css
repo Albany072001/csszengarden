@@ -201,6 +201,17 @@ abbr[title] {
   background-image: url("assets/scene-1-character.svg");
   background-size: 15.2% 33.5%;
   background-position: 26.3% 65.8%;
+  animation: character-idle 2.5s ease-in-out 1.2s infinite;
+}
+
+@keyframes character-idle {
+  0%, 100% {
+    background-position: 26.3% 65.8%;
+  }
+
+  50% {
+    background-position: 26.3% calc(65.8% - 8px);
+  }
 }
  
 /* Bottom layers: house and landscape */
@@ -210,6 +221,52 @@ abbr[title] {
   background-image: url("assets/scene-1-house.svg"), url("assets/scene-1-landscape.svg");
   background-size: 40.3% 50.5%, 100% 31%;
   background-position: 83% 44.4%, center bottom;
+}
+
+/* One-time, scroll-triggered house transition to next chapter */
+
+@supports (animation-trigger: --house-reveal play-once) {
+
+  .intro::after {
+    animation: house-reveal 1.2s ease-out both;
+
+    animation-trigger: --house-reveal play-once;
+
+    timeline-trigger-name: --house-reveal;
+    timeline-trigger-source: scroll(root block);
+    timeline-trigger-exit-range-start: 10px 100%;
+  }
+}
+
+/* House starts visible, then moves downward out of view */
+
+@keyframes house-scroll-exit {
+  from {
+    background-position: 83% 44.4%, center bottom;
+  }
+
+  to {
+    background-position: 83% calc(44.4% + 100vh), center bottom;
+  }
+}
+
+/* Scroll-driven animation */
+
+@supports (animation-timeline: scroll(root block)) {
+  .intro::after {
+    animation: house-scroll-exit 1s linear both;
+    animation-timeline: scroll(root block);
+    animation-range: 0px 600px;
+  }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .intro::after {
+    animation: none;
+    background-position: 83% 44.4%, center bottom;
+  }
 }
  
 /* ============ Chapters 2 and 3 — shared grid ============
@@ -254,7 +311,7 @@ abbr[title] {
 }
 
 .main.supporting > .explanation::before {
-  content: 'Chapter Two -- he same house comes to life with vibrant colors and an animated background';
+  content: 'Chapter Two -- The same house comes to life with vibrant colors and an animated background';
   display: block;
   margin-bottom: 2rem;
   color: var(--link);
