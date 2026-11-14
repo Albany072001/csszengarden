@@ -261,7 +261,7 @@ abbr[title] {
   .intro::after {
     animation: house-scroll-exit 1s linear both;
     animation-timeline: scroll(root block);
-    animation-range: 0px 600px;
+    animation-range: 0px 1000px;
   }
 }
 
@@ -434,7 +434,7 @@ abbr[title] {
   .main.supporting::before {
     animation: chapter-two-entrance 1s linear both;
     animation-timeline: view(block);
-    animation-range: entry 0% cover 35%;
+    animation-range: entry 0% cover 85%;
   }
 }
 
@@ -507,7 +507,7 @@ abbr[title] {
   .main.supporting::after {
     animation: chapter-three-entrance 1s linear both;
     animation-timeline: view(block);
-    animation-range: entry 0% cover 85%;
+    animation-range: entry 0% cover 95%;
   }
 }
 
