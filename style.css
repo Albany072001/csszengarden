@@ -13,15 +13,17 @@
  * Three-chapter, CSS-only storybook theme.
  * Fixed HTML contract: never edit the provided index.html.
  * Illustration paths are relative to this stylesheet.
- * Replace the three temporary images with digital hand-drawm SVG for submission.
+ * Layered SVG illustrations are used for each chapter.
  */
 
- /* ============ Design Tokens ============ */
+/* ============ Design Tokens ============ */
 
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:wght@400;600;700&display=swap');
 
 :root {
   color-scheme: light;
+
+  /* Color palette */
   --ink: #333b32;
   --muted: #586657;
   --link: #476b50;
@@ -34,14 +36,44 @@
   --olive: #786106;
   --rust: #a63e10;
   --hairline: #c7cabb;
+
+  /* Font families */
+  --font-body: 'Source Sans 3', Arial, sans-serif;
+  --font-heading: Lora, Georgia, serif;
+
+  /* Font sizes */
+  --font-size-body: 1.1875rem;
+  --font-size-summary: 1.0625rem;
+  --font-size-chapter-label: 0.8125rem;
+  --font-size-heading-3: clamp(1.55rem, 2.25vw, 2.125rem);
+  --font-size-heading-1: clamp(3rem, 5.8vw, 5.5rem);
+  --font-size-heading-2: clamp(1.25rem, 2.2vw, 1.875rem);
+
+  /* Type rhythm */
+  --line-height-body: 1.62;
+  --line-height-heading: 1.2;
+  --line-height-label: 1.4;
+  --line-height-sidebar: 1.45;
+  --font-weight-regular: 400;
+  --font-weight-heading: 500;
+  --font-weight-label: 700;
+  --tracking-heading: -0.025em;
+  --tracking-label: 0.09em;
+
+  /* Page layout and illustration geometry */
   --gutter: clamp(1.375rem, 5vw, 6.5rem);
   --columns-gap: clamp(1.75rem, 4.5vw, 4rem);
-  --text-width: 68ch;
+  --scene-padding-block: 5rem;
+  --illustration-aspect-ratio: 534 / 400;
+
+  /* Shared spacing */
+  --chapter-label-margin: 2rem;
+  --sidebar-padding-top: 64px;
+  --sidebar-padding-bottom: 96px;
+  --sidebar-column-gap: clamp(2rem, 5vw, 5rem);
 }
 
-/* ============ Reset, Typography, & Links ============ 
-  Base/reset — no IDs and no HTML edits.
-*/
+/* ============ Reset, Typography, & Links ============ */
 
 *, *::before, *::after { 
   box-sizing: border-box; 
@@ -56,7 +88,7 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font: 400 1.1875rem/1.62 'Source Sans 3', Arial, sans-serif;
+  font: var(--font-weight-regular) var(--font-size-body)/var(--line-height-body) var(--font-body);
 }
 
 /* Anchor styling */
@@ -91,15 +123,15 @@ p:last-child {
 
 h1, h2, h3 {
   margin: 0 0 .72em;
-  font-family: Lora, Georgia, serif;
-  font-weight: 500;
-  line-height: 1.2;
-  letter-spacing: -.025em;
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-heading);
+  line-height: var(--line-height-heading);
+  letter-spacing: var(--tracking-heading);
   overflow-wrap: break-word;
 }
 
 h3 { 
-  font-size: clamp(1.55rem, 2.25vw, 2.125rem); 
+  font-size: var(--font-size-heading-3); 
 }
 
 abbr[title] { 
@@ -123,7 +155,7 @@ abbr[title] {
   align-items: start;
 }
 
-/* ============ Chapter 1: text (left) & layered images (rigth) ============ */
+/* ============ Chapter 1: text (left) & layered images (right) ============ */
 
 .intro {
   grid-template-areas:
@@ -132,7 +164,7 @@ abbr[title] {
     "preamble illustration";
  
   row-gap: 2rem;
-  padding-block: 5rem;
+  padding-block: var(--scene-padding-block);
   background-color: var(--scene-one);
 }
  
@@ -145,7 +177,7 @@ abbr[title] {
   grid-area: summary; 
   min-width: 0;
   color: var(--muted);
-  font-size: 1.0625rem;
+  font-size: var(--font-size-summary);
 }
 
 .intro > .preamble {
@@ -153,26 +185,32 @@ abbr[title] {
   min-width: 0; 
 }
  
+/* Consistent story chapter labels */
+.intro > header::before,
+.main.supporting > .explanation::before,
+.main.supporting > .benefits::before {
+  display: block;
+  font: var(--font-weight-label) var(--font-size-chapter-label)/var(--line-height-label) var(--font-body);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+}
+
 /* Chapter 1 - Shared images canvas */
  
 .intro > header::before {
   content: 'Chapter One -- The house stands against a simple, muted beige background';
-  display: block;
   margin-bottom: 1.5rem;
   color: var(--link);
-  font: 700 0.8125rem/1.4 'Source Sans 3', Arial, sans-serif;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
 }
 
 .intro > header h1 {
   color: var(--blue); 
-  font-size: clamp(3rem, 5.8vw, 5.5rem); 
+  font-size: var(--font-size-heading-1); 
 }
 
 .intro > header h2 {
   color: var(--blue); 
-  font-size: clamp(1.25rem, 2.2vw, 1.875rem); 
+  font-size: var(--font-size-heading-2); 
   font-style: italic; 
 }
 
@@ -180,14 +218,13 @@ abbr[title] {
   color: var(--blue); 
 }
 
-
 .intro::before,
 .intro::after {
   content: "";
   display: block;
   grid-area: illustration;
   width: 100%;
-  aspect-ratio: 534 / 400;
+  aspect-ratio: var(--illustration-aspect-ratio);
   align-self: center;
   justify-self: stretch;
   background-repeat: no-repeat;
@@ -224,25 +261,6 @@ abbr[title] {
   background-position: 83% 44.4%, center bottom;
 }
 
-/* Scroll-driven character exit */
-
-@supports (animation-timeline: scroll(root block)) {
-  .intro::before {
-    animation: character-one-exit 1s linear both;
-    animation-timeline: scroll(root block);
-    animation-range: 0px 1000px;
-  }
-}
-
-/* Reduced motion */
-
-@media (prefers-reduced-motion: reduce) {
-  .intro::before {
-    animation: none;
-    background-position: 26.3% 65.8%;
-  }
-}
-
 /* House starts visible, then moves downward out of view */
 
 @keyframes house-scroll-exit {
@@ -255,25 +273,21 @@ abbr[title] {
   }
 }
 
-/* Scroll-driven animation */
-
+/* Chapter 1: character and house use the same root scroll range. */
 @supports (animation-timeline: scroll(root block)) {
+  .intro::before {
+    animation: character-one-exit 1s linear both;
+    animation-timeline: scroll(root block);
+    animation-range: 0px 1000px;
+  }
+
   .intro::after {
     animation: house-scroll-exit 1s linear both;
     animation-timeline: scroll(root block);
-    animation-range: 0px 600px;
+    animation-range: 0px 1000px;
   }
 }
 
-/* Accessibility */
-
-@media (prefers-reduced-motion: reduce) {
-  .intro::after {
-    animation: none;
-    background-position: 83% 44.4%, center bottom;
-  }
-}
- 
 /* ============ Chapters 2 and 3 — shared grid ============
   One container, but each chapter owns its own rows.
   Text sits in the LEFT column, illustrations in the RIGHT. */
@@ -304,37 +318,44 @@ abbr[title] {
 
 /* Chapter 2: background color, font styling & full width */
 
-
 .main.supporting > .explanation {
   grid-area: explanation;
-  padding-top: 5rem; 
+  padding-top: var(--scene-padding-block); 
 }
 
 .main.supporting > .participation {
   grid-area: participation; 
-  padding-bottom: 5rem; 
+  padding-bottom: var(--scene-padding-block); 
 }
 
 .main.supporting > .explanation::before {
   content: 'Chapter Two -- The same house comes to life with vibrant colors and an animated background';
-  display: block;
-  margin-bottom: 2rem;
+  margin-bottom: var(--chapter-label-margin);
   color: var(--link);
-  font: 700 0.8125rem/1.4 'Source Sans 3', Arial, sans-serif;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
 }
 
+/* Shared full-width chapter color bands */
 .main.supporting > .explanation::after,
-.main.supporting > .participation::after {
+.main.supporting > .participation::after,
+.main.supporting > .benefits::after,
+.main.supporting > .requirements::after {
   content: '';
   position: absolute;
   inset-block: 0;
   left: calc(-1 * var(--gutter));
   width: 100vw;
-  background: var(--scene-two);
   z-index: -1;
   pointer-events: none;
+}
+
+.main.supporting > .explanation::after,
+.main.supporting > .participation::after {
+  background: var(--scene-two);
+}
+
+.main.supporting > .benefits::after,
+.main.supporting > .requirements::after {
+  background: var(--scene-three);
 }
 
 .explanation h3, .participation h3 {
@@ -345,7 +366,7 @@ abbr[title] {
 
 .main.supporting > .benefits {
   grid-area: benefits; 
-  padding-top: 5rem; 
+  padding-top: var(--scene-padding-block); 
 }
 
 .main.supporting > .requirements {
@@ -356,24 +377,8 @@ abbr[title] {
 
 .main.supporting > .benefits::before {
   content: 'Chapter Three -- The same house, transformed by harmonious color patterns';
-  display: block;
-  margin-bottom: 2rem;
+  margin-bottom: var(--chapter-label-margin);
   color: var(--rust);
-  font: 700 0.8125rem/1.4 'Source Sans 3', Arial, sans-serif;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-}
-
-.main.supporting > .requirements::after,
-.main.supporting > .benefits::after {
-  content: '';
-  position: absolute;
-  inset-block: 0;
-  left: calc(-1 * var(--gutter));
-  width: 100vw;
-  background: var(--scene-three);
-  z-index: -1;
-  pointer-events: none;
 }
 
 .benefits h3, .requirements h3 {
@@ -388,7 +393,7 @@ abbr[title] {
   display: block;
   z-index: 1;
   width: 100%;
-  aspect-ratio: 534 / 400;
+  aspect-ratio: var(--illustration-aspect-ratio);
   align-self: center;
   background-repeat: no-repeat;
   pointer-events: none;
@@ -403,7 +408,7 @@ abbr[title] {
   background-position: 26.3% 65.8%, 83% 44.4%,   center bottom;
 }
 
-/* Character and house animmation, following chp 1 transition */
+/* Character and house animation, following chp 1 transition */
 
 @keyframes chapter-two-entrance {
 
@@ -434,18 +439,10 @@ abbr[title] {
   .main.supporting::before {
     animation: chapter-two-entrance 1s linear both;
     animation-timeline: view(block);
-    animation-range: entry 0% cover 35%;
+    animation-range: entry 0% cover 85%;
   }
 }
 
-/* Accessibility */
-
-@media (prefers-reduced-motion: reduce) {
-  .main.supporting::before {
-    animation: none;
-    background-position: 26.3% 65.8%, 83% 44.4%, center bottom;
-  }
-}
 
 /* Chapter 3 SVG */
 
@@ -456,48 +453,33 @@ abbr[title] {
   background-position: 26.3% 65.8%, 83% 44.4%, center bottom;
 }
 
-/* Character, house & landsapce animmation, following chp 2 transition */
+/* Character, house & landscape animation, following chp 2 transition */
 
 @keyframes chapter-three-entrance {
 
   /* All elements start outside the illustration */
   0% {
-    background-position:
-      calc(26.3% - 40vw) 65.8%, /* Character */
-      83% calc(44.4% - 100vh),  /* House */
-      center calc(100% + 500px); /* Landscape */
+    background-position: calc(26.3% - 40vw) 65.8%, 83% calc(44.4% - 100vh), center calc(100% + 500px); 
   }
 
   /* Landscape starts rising, house starts descending */
   35% {
-    background-position:
-      calc(26.3% - 40vw) 65.8%,
-      83% calc(44.4% - 50vh),
-      center calc(100% + 250px);
+    background-position: calc(26.3% - 40vw) 65.8%, 83% calc(44.4% - 50vh), center calc(100% + 250px);
   }
 
   /* Landscape reaches position, house nearly arrives */
   60% {
-    background-position:
-      calc(26.3% - 20vw) 65.8%,
-      83% calc(44.4% - 100px),
-      center bottom;
+    background-position: calc(26.3% - 20vw) 65.8%, 83% calc(44.4% - 100px), center bottom;
   }
 
   /* House and character finish entering */
   75% {
-    background-position:
-      26.3% 65.8%,
-      83% 44.4%,
-      center bottom;
+    background-position: 26.3% 65.8%, 83% 44.4%, center bottom;
   }
 
   /* Hold all elements at their final positions */
   100% {
-    background-position:
-      26.3% 65.8%,
-      83% 44.4%,
-      center bottom;
+    background-position: 26.3% 65.8%, 83% 44.4%, center bottom;
   }
 }
 
@@ -507,19 +489,7 @@ abbr[title] {
   .main.supporting::after {
     animation: chapter-three-entrance 1s linear both;
     animation-timeline: view(block);
-    animation-range: entry 0% cover 85%;
-  }
-}
-
-/* Accessibility */
-
-@media (prefers-reduced-motion: reduce) {
-  .main.supporting::after {
-    animation: none;
-    background-position:
-      26.3% 65.8%,
-      83% 44.4%,
-      center bottom;
+    animation-range: entry 0% cover 95%;
   }
 }
 
@@ -558,14 +528,14 @@ abbr[title] {
 
 .sidebar {
   width: 100%;
-  padding: 64px var(--gutter) 96px;
+  padding: var(--sidebar-padding-top) var(--gutter) var(--sidebar-padding-bottom);
   background: var(--appendix);
 }
 
 .sidebar .wrapper {
   display: grid;
   grid-template-columns: minmax(0, 2fr) minmax(0, 0.75fr) minmax(0, 1.1fr);
-  column-gap: clamp(2rem, 5vw, 5rem);
+  column-gap: var(--sidebar-column-gap);
   border-top: 1px solid var(--hairline);
   padding-top: 32px;
   width: 100%;
@@ -588,7 +558,7 @@ abbr[title] {
 
 .sidebar li {
   margin-bottom: 1.25rem; 
-  line-height: 1.45; 
+  line-height: var(--line-height-sidebar); 
 }
 
 .sidebar .design-selection ul {
@@ -604,7 +574,7 @@ abbr[title] {
 .sidebar .design-selection li {
   min-width: 0;
   margin: 0;
-  line-height: 1.45;
+  line-height: var(--line-height-sidebar);
 }
 
 .sidebar .design-selection .design-name {
@@ -618,7 +588,270 @@ abbr[title] {
 }
 
 .sidebar .design-selection .designer-name {
-  line-height: 1.45;
+  line-height: var(--line-height-sidebar);
   text-decoration: none;
 }
 
+
+/* ============ Accessibility: Reduced Motion ============ */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .intro::before,
+  .intro::after,
+  .main.supporting::before,
+  .main.supporting::after {
+    animation: none;
+  }
+
+  .intro::before {
+    background-position: 26.3% 65.8%;
+  }
+
+  .intro::after {
+    background-position: 83% 44.4%, center bottom;
+  }
+
+  .main.supporting::before,
+  .main.supporting::after {
+    background-position: 26.3% 65.8%, 83% 44.4%, center bottom;
+  }
+}
+
+/* ============ Responsive chapter layouts ============ */
+/* Desktop remains the default. On narrower screens, each SVG 
+   follows to a single column. */
+
+@media (max-width: 900px) {
+
+  /* Responsive design tokens */
+
+  :root {
+    --gutter: clamp(1.25rem, 5vw, 3rem);
+    --columns-gap: 2rem;
+    --scene-padding-block: 3.5rem;
+    --font-size-body: 1.0625rem;
+    --sidebar-column-gap: 2rem;
+  }
+
+  /* Switch both chapter layouts to one column */
+
+  .intro,
+  .main.supporting {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  /* ==========================================
+     Chapter 1 - Responsive Layout
+     ========================================== */
+
+  .intro {
+    grid-template-areas:
+      "header"
+      "summary"
+      "preamble"
+      "illustration";
+
+    row-gap: 1.5rem;
+  }
+
+  /* Keep character and house/landscape aligned */
+
+  .intro::before,
+  .intro::after {
+    width: min(100%, 620px);
+    justify-self: center;
+    align-self: center;
+  }
+
+  /* ==========================================
+     Chapter 1 - Mobile Animations
+     ========================================== */
+
+  /* Character remains visible, then exits left */
+
+  @keyframes character-one-mobile-exit {
+
+    0%, 25% {
+      background-position:
+        26.3% 65.8%;
+    }
+
+    100% {
+      background-position:
+        calc(26.3% - 40vw) 65.8%;
+    }
+  }
+
+  /* House remains visible, then exits downward */
+
+  @keyframes house-one-mobile-exit {
+
+    0%, 35% {
+      background-position:
+        83% 44.4%,
+        center bottom;
+    }
+
+    100% {
+      background-position:
+        83% calc(44.4% + 100vh),
+        center bottom;
+    }
+  }
+
+  /* Use the artwork's visibility instead of root scroll */
+
+  @supports (animation-timeline: view(block)) {
+
+    .intro::before {
+      animation: character-one-mobile-exit 1s linear both;
+      animation-timeline: view(block);
+      animation-range: entry 0% exit 100%;
+    }
+
+    .intro::after {
+      animation: house-one-mobile-exit 1s linear both;
+      animation-timeline: view(block);
+      animation-range: entry 0% exit 100%;
+    }
+
+    /* Chapters 2 and 3 retain mobile scroll timing */
+
+    .main.supporting::before {
+      animation-range: entry 0% cover 75%;
+    }
+
+    .main.supporting::after {
+      animation-range: entry 0% cover 80%;
+    }
+  }
+
+  /* ==========================================
+     Chapters 2 & 3 - Responsive Layout
+     ========================================== */
+
+  .main.supporting {
+    grid-template-areas:
+      "explanation"
+      "participation"
+      "scene-two"
+      "benefits"
+      "requirements"
+      "scene-three"
+      "footer";
+  }
+
+  .main.supporting > .participation,
+  .main.supporting > .requirements {
+    padding-bottom: 2rem;
+  }
+
+  /* Illustration sizing */
+
+  .main.supporting::before,
+  .main.supporting::after {
+    width: min(100%, 620px);
+    justify-self: center;
+    align-self: center;
+    margin-block: 0 3rem;
+  }
+
+  /* Chapter 2 - Background color */
+
+  .main.supporting::before {
+    background-color: var(--scene-two);
+    box-shadow: 0 0 0 100vmax var(--scene-two);
+    clip-path: inset(0 -100vmax);
+  }
+
+  /* Chapter 3 - Background color */
+
+  .main.supporting::after {
+    background-color: var(--scene-three);
+    box-shadow: 0 0 0 100vmax var(--scene-three);
+    clip-path: inset(0 -100vmax);
+  }
+
+  /* ==========================================
+     Footer and Sidebar
+     ========================================== */
+
+  .supporting > footer::before {
+    flex-basis: 100%;
+    margin-right: 0;
+  }
+
+  .sidebar .wrapper {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: var(--sidebar-column-gap);
+  }
+
+  .sidebar .design-selection {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ============================================
+   MOBILE: 600px and below
+   ============================================ */
+
+@media (max-width: 600px) {
+
+  /* Mobile design tokens */
+
+  :root {
+    --gutter: 1.25rem;
+    --scene-padding-block: 2.75rem;
+    --font-size-body: 1rem;
+
+    --font-size-heading-1:
+      clamp(2.5rem, 10vw, 4rem);
+
+    --font-size-heading-2:
+      clamp(1.125rem, 5vw, 1.5rem);
+
+    --font-size-heading-3:
+      clamp(1.5rem, 6vw, 1.875rem);
+
+    --sidebar-padding-top: 40px;
+    --sidebar-padding-bottom: 48px;
+  }
+
+  /* Chapter 1 spacing */
+
+  .intro {
+    row-gap: 1.25rem;
+  }
+
+  /* Full-width illustrations */
+
+  .intro::before,
+  .intro::after,
+  .main.supporting::before,
+  .main.supporting::after {
+    width: 100%;
+  }
+
+  /* Footer */
+
+  .supporting > footer {
+    gap: 1rem;
+    padding-block: 2rem;
+  }
+
+  /* Single-column sidebar */
+
+  .sidebar .wrapper,
+  .sidebar .design-selection ul {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .sidebar .design-selection {
+    grid-column: auto;
+  }
+}
