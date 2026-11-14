@@ -254,7 +254,7 @@ abbr[title] {
 }
 
 .main.supporting > .explanation::before {
-  content: 'Chapter Two -- he same house comes to life with vibrant colors and an animated background';
+  content: 'Chapter Two -- The same house comes to life with vibrant colors and an animated background';
   display: block;
   margin-bottom: 2rem;
   color: var(--link);
