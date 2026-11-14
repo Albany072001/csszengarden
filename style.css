@@ -619,3 +619,239 @@ abbr[title] {
     background-position: 26.3% 65.8%, 83% 44.4%, center bottom;
   }
 }
+
+/* ============ Responsive chapter layouts ============ */
+/* Desktop remains the default. On narrower screens, each SVG 
+   follows to a single column. */
+
+@media (max-width: 900px) {
+
+  /* Responsive design tokens */
+
+  :root {
+    --gutter: clamp(1.25rem, 5vw, 3rem);
+    --columns-gap: 2rem;
+    --scene-padding-block: 3.5rem;
+    --font-size-body: 1.0625rem;
+    --sidebar-column-gap: 2rem;
+  }
+
+  /* Switch both chapter layouts to one column */
+
+  .intro,
+  .main.supporting {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  /* ==========================================
+     Chapter 1 - Responsive Layout
+     ========================================== */
+
+  .intro {
+    grid-template-areas:
+      "header"
+      "summary"
+      "preamble"
+      "illustration";
+
+    row-gap: 1.5rem;
+  }
+
+  /* Keep character and house/landscape aligned */
+
+  .intro::before,
+  .intro::after {
+    width: min(100%, 620px);
+    justify-self: center;
+    align-self: center;
+  }
+
+  /* ==========================================
+     Chapter 1 - Mobile Animations
+     ========================================== */
+
+  /* Character remains visible, then exits left */
+
+  @keyframes character-one-mobile-exit {
+
+    0%, 25% {
+      background-position:
+        26.3% 65.8%;
+    }
+
+    100% {
+      background-position:
+        calc(26.3% - 40vw) 65.8%;
+    }
+  }
+
+  /* House remains visible, then exits downward */
+
+  @keyframes house-one-mobile-exit {
+
+    0%, 35% {
+      background-position:
+        83% 44.4%,
+        center bottom;
+    }
+
+    100% {
+      background-position:
+        83% calc(44.4% + 100vh),
+        center bottom;
+    }
+  }
+
+  /* Use the artwork's visibility instead of root scroll */
+
+  @supports (animation-timeline: view(block)) {
+
+    .intro::before {
+      animation: character-one-mobile-exit 1s linear both;
+      animation-timeline: view(block);
+      animation-range: entry 0% exit 100%;
+    }
+
+    .intro::after {
+      animation: house-one-mobile-exit 1s linear both;
+      animation-timeline: view(block);
+      animation-range: entry 0% exit 100%;
+    }
+
+    /* Chapters 2 and 3 retain mobile scroll timing */
+
+    .main.supporting::before {
+      animation-range: entry 0% cover 75%;
+    }
+
+    .main.supporting::after {
+      animation-range: entry 0% cover 80%;
+    }
+  }
+
+  /* ==========================================
+     Chapters 2 & 3 - Responsive Layout
+     ========================================== */
+
+  .main.supporting {
+    grid-template-areas:
+      "explanation"
+      "participation"
+      "scene-two"
+      "benefits"
+      "requirements"
+      "scene-three"
+      "footer";
+  }
+
+  .main.supporting > .participation,
+  .main.supporting > .requirements {
+    padding-bottom: 2rem;
+  }
+
+  /* Illustration sizing */
+
+  .main.supporting::before,
+  .main.supporting::after {
+    width: min(100%, 620px);
+    justify-self: center;
+    align-self: center;
+    margin-block: 0 3rem;
+  }
+
+  /* Chapter 2 - Background color */
+
+  .main.supporting::before {
+    background-color: var(--scene-two);
+    box-shadow: 0 0 0 100vmax var(--scene-two);
+    clip-path: inset(0 -100vmax);
+  }
+
+  /* Chapter 3 - Background color */
+
+  .main.supporting::after {
+    background-color: var(--scene-three);
+    box-shadow: 0 0 0 100vmax var(--scene-three);
+    clip-path: inset(0 -100vmax);
+  }
+
+  /* ==========================================
+     Footer and Sidebar
+     ========================================== */
+
+  .supporting > footer::before {
+    flex-basis: 100%;
+    margin-right: 0;
+  }
+
+  .sidebar .wrapper {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: var(--sidebar-column-gap);
+  }
+
+  .sidebar .design-selection {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ============================================
+   MOBILE: 600px and below
+   ============================================ */
+
+@media (max-width: 600px) {
+
+  /* Mobile design tokens */
+
+  :root {
+    --gutter: 1.25rem;
+    --scene-padding-block: 2.75rem;
+    --font-size-body: 1rem;
+
+    --font-size-heading-1:
+      clamp(2.5rem, 10vw, 4rem);
+
+    --font-size-heading-2:
+      clamp(1.125rem, 5vw, 1.5rem);
+
+    --font-size-heading-3:
+      clamp(1.5rem, 6vw, 1.875rem);
+
+    --sidebar-padding-top: 40px;
+    --sidebar-padding-bottom: 48px;
+  }
+
+  /* Chapter 1 spacing */
+
+  .intro {
+    row-gap: 1.25rem;
+  }
+
+  /* Full-width illustrations */
+
+  .intro::before,
+  .intro::after,
+  .main.supporting::before,
+  .main.supporting::after {
+    width: 100%;
+  }
+
+  /* Footer */
+
+  .supporting > footer {
+    gap: 1rem;
+    padding-block: 2rem;
+  }
+
+  /* Single-column sidebar */
+
+  .sidebar .wrapper,
+  .sidebar .design-selection ul {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .sidebar .design-selection {
+    grid-column: auto;
+  }
+}
