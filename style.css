@@ -201,16 +201,17 @@ abbr[title] {
   background-image: url("assets/scene-1-character.svg");
   background-size: 15.2% 33.5%;
   background-position: 26.3% 65.8%;
-  animation: character-idle 2.5s ease-in-out 1.2s infinite;
 }
 
-@keyframes character-idle {
-  0%, 100% {
+/* Character moves left as the user scrolls down */
+
+@keyframes character-one-exit {
+  from {
     background-position: 26.3% 65.8%;
   }
 
-  50% {
-    background-position: 26.3% calc(65.8% - 8px);
+  to {
+    background-position: calc(26.3% - 100vw) 65.8%;
   }
 }
  
@@ -225,16 +226,32 @@ abbr[title] {
 
 /* One-time, scroll-triggered house transition to next chapter */
 
-@supports (animation-trigger: --house-reveal play-once) {
+@keyframes character-one-exit {
+  from {
+    background-position: 26.3% 65.8%;
+  }
 
-  .intro::after {
-    animation: house-reveal 1.2s ease-out both;
+  to {
+    background-position: calc(26.3% - 40vw) 65.8%;
+  }
+}
 
-    animation-trigger: --house-reveal play-once;
+/* Scroll-driven character exit */
 
-    timeline-trigger-name: --house-reveal;
-    timeline-trigger-source: scroll(root block);
-    timeline-trigger-exit-range-start: 10px 100%;
+@supports (animation-timeline: scroll(root block)) {
+  .intro::before {
+    animation: character-one-exit 1s linear both;
+    animation-timeline: scroll(root block);
+    animation-range: 0px 1000px;
+  }
+}
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  .intro::before {
+    animation: none;
+    background-position: 26.3% 65.8%;
   }
 }
 
@@ -396,6 +413,50 @@ abbr[title] {
   background-image: url("assets/scene-2-character.svg"), url("assets/scene-2-house.svg"), url("assets/scene-2-landscape.svg");
   background-size:     15.2% 33.5%, 40.3% 50.5%, 100% 31%;
   background-position: 26.3% 65.8%, 83% 44.4%,   center bottom;
+}
+
+/* Character and house animmation, following chp 1 transition */
+
+@keyframes chapter-two-entrance {
+
+  /* House above the scene, character to the left */
+  0% {
+    background-position: calc(26.3% - 180px) 65.8%, 83% calc(44.4% - 450px), center bottom;
+  }
+
+  /* House drops into its final position */
+  45% {
+    background-position: calc(26.3% - 180px) 65.8%, 83% 44.4%, center bottom;
+  }
+
+  /* Character enters and makes a small hop */
+  80% {
+    background-position: 26.3% calc(65.8% - 18px), 83% 44.4%, center bottom;
+  }
+
+  /* Both objects settle into their normal positions */
+  100% {
+    background-position: 26.3% 65.8%, 83% 44.4%, center bottom;
+  }
+}
+
+/* Scroll-driven animation */
+
+@supports (animation-timeline: view()) {
+  .main.supporting::before {
+    animation: chapter-two-entrance 1s linear both;
+    animation-timeline: view(block);
+    animation-range: entry 0% cover 45%;
+  }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .main.supporting::before {
+    animation: none;
+    background-position: 26.3% 65.8%, 83% 44.4%, center bottom;
+  }
 }
 
 /* Chapter 3 SVG */
