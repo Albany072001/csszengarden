@@ -211,7 +211,7 @@ abbr[title] {
   }
 
   to {
-    background-position: calc(26.3% - 100vw) 65.8%;
+    background-position: calc(26.3% - 40vw) 65.8%;
   }
 }
  
@@ -222,18 +222,6 @@ abbr[title] {
   background-image: url("assets/scene-1-house.svg"), url("assets/scene-1-landscape.svg");
   background-size: 40.3% 50.5%, 100% 31%;
   background-position: 83% 44.4%, center bottom;
-}
-
-/* One-time, scroll-triggered house transition to next chapter */
-
-@keyframes character-one-exit {
-  from {
-    background-position: 26.3% 65.8%;
-  }
-
-  to {
-    background-position: calc(26.3% - 40vw) 65.8%;
-  }
 }
 
 /* Scroll-driven character exit */
@@ -446,7 +434,7 @@ abbr[title] {
   .main.supporting::before {
     animation: chapter-two-entrance 1s linear both;
     animation-timeline: view(block);
-    animation-range: entry 0% cover 45%;
+    animation-range: entry 0% cover 35%;
   }
 }
 
@@ -465,7 +453,74 @@ abbr[title] {
   grid-area: scene-three;
   background-image: url("assets/scene-3-character.svg"), url("assets/scene-3-house.svg"), url("assets/scene-3-landscape.svg");
   background-size:     15.2% 33.5%, 40.3% 50.5%, 100% 31%;
-  background-position: 26.3% 65.8%, 83% 44.4%,   center bottom;
+  background-position: 26.3% 65.8%, 83% 44.4%, center bottom;
+}
+
+/* Character, house & landsapce animmation, following chp 2 transition */
+
+@keyframes chapter-three-entrance {
+
+  /* All elements start outside the illustration */
+  0% {
+    background-position:
+      calc(26.3% - 40vw) 65.8%, /* Character */
+      83% calc(44.4% - 100vh),  /* House */
+      center calc(100% + 500px); /* Landscape */
+  }
+
+  /* Landscape starts rising, house starts descending */
+  35% {
+    background-position:
+      calc(26.3% - 40vw) 65.8%,
+      83% calc(44.4% - 50vh),
+      center calc(100% + 250px);
+  }
+
+  /* Landscape reaches position, house nearly arrives */
+  60% {
+    background-position:
+      calc(26.3% - 20vw) 65.8%,
+      83% calc(44.4% - 100px),
+      center bottom;
+  }
+
+  /* House and character finish entering */
+  75% {
+    background-position:
+      26.3% 65.8%,
+      83% 44.4%,
+      center bottom;
+  }
+
+  /* Hold all elements at their final positions */
+  100% {
+    background-position:
+      26.3% 65.8%,
+      83% 44.4%,
+      center bottom;
+  }
+}
+
+/* Track the illustration itself instead of .benefits. */
+
+@supports (animation-timeline: view(block)) {
+  .main.supporting::after {
+    animation: chapter-three-entrance 1s linear both;
+    animation-timeline: view(block);
+    animation-range: entry 0% cover 85%;
+  }
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  .main.supporting::after {
+    animation: none;
+    background-position:
+      26.3% 65.8%,
+      83% 44.4%,
+      center bottom;
+  }
 }
 
 /* ============ Footer Layout ============*/
